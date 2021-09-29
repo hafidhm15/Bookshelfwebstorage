@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="container my-3">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/buku.png" class="Icon"> BookshelfApps.
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">BookList</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                </ul>
+                 <div class="navbar-action d-sm-none d-md-none d-lg-block">
+                    <button type="button" class="btn btn-dark rounded-pill">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+      <section class="input_section">
+        <h2 id="Judul">Masukkan Buku</h2>
+        <form id="inputBook">
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputJudul">Judul</label>
+                <input type="text" class="form-control" id="inputJudul">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputPenulis">Penulis</label>
+                <input type="text" class="form-control" id="inputPenulis">
+              </div>
+            <div class="form-group col-md-12">
+                <label for="inputTahun">Tahun</label>
+                <input type="text" class="form-control" id="inputTahun">
+              </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="inputBookIsComplete">
+                <label class="form-check-label" for="inputBookIsComplete">
+                Selesai Baca
+                </label>
+              </div>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-danger" id="bookSubmit">Masukkan</button>
+          </form>
+      </section>
+    </main>
+    
+    <section class="search_section">
+    <form id="searchBook" class="example"style="margin:auto;max-width:300px">
+        <input type="text" placeholder="Search.." name="search" id="searchBookTitle">
+        <button class="btn btn-dark" id="searchSubmit" type="button">Search</button>
+      </form>
+    </section>
+
+      <section class="book_shelf">
+        <section class="mt-6">
+            <h4 class="border-bottom border-info" id="read">Belum selesai dibaca</h4>
+            <div id="incompleteBookshelfList">
+    
+            </div>
+        </section>
+    
+        <section class="mt-5">
+            <h4 class="border-bottom border-info" id="read">Selesai dibaca</h4>
+            <div id="completeBookshelfList">
+    
+            </div>
+        </section>
+</div>
+<script src="js/data.js" type="text/javascript"></script>
+<script src="js/dom.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
